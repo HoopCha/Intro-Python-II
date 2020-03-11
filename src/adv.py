@@ -38,13 +38,13 @@ room['treasure'].s_to = room['narrow']
 room['outside'].items = [Item(
     'rock', 'A heavy rock, I wonder what I could use this for...')]
 room['foyer'].items = [Item(
-    'longsword', 'A longsword. It is a bit rusted, but it will do.')]
+    'Torch', 'Its already lit, how strange')]
 room['narrow'].items = [Item(
-    'coin', 'A few coins, looks like someone has been here before...I wonder where this leads?')]
+    'pickaxe', 'Its broken, but still good')]
 room['treasure'].items = [Item(
-    'old_chest', 'There must be a lot of gold in here!'),
+    'old_chest', 'Gold'),
     Item(
-    'shiny_chest', 'There must be a lot of gold in here!')]  
+    'shiny_chest', 'Curse')]  
 
 #
 # Main
@@ -70,6 +70,7 @@ secretPassage = False
 # If the user enters "q", quit the game.
 
 while completion == False:
+    #This controls if the secret passage conditions have been met, only runs once
     if secretPassage == False and newplayer.currentRoom.location == 'Narrow Passage' and any(item.name == 'rock' for item in newplayer.currentRoom.items):
         print('\nYou place the rock into the hole, a secret passage to the north opens')
         secretPassage = True
