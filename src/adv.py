@@ -96,7 +96,7 @@ while completion == False:
     else:
         print('There are no items left in this room.\n')
     movement = input(
-        f"What would you like to do? \nN, E, S, W to move \nType 'get' and the name of the item to add the item to player inventory.\nI to view your inventory.\nType 'drop' and the name of the item to remove the item from the player inventory.\nPress Q to exit.\n\n")
+        f"What would you like to do? \nn, e, s, w to move \nType 'get' and the name of the item to add the item to player inventory.\nI to view your inventory.\nType 'drop' and the name of the item to remove the item from the player inventory.\nPress Q to exit.\n\n")
     result = movement.split(' ')
     if result[0] == 'get':
         for item in newplayer.currentRoom.items:
